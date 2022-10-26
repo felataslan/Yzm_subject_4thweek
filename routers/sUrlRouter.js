@@ -19,7 +19,7 @@ router.post("/shortlink", async (req, res) => {
         return res.status(401).json("Invalid base url");
     }
 
-    const urlCode = shortid.generate()
+    const urlCode = shortid.generate().slice('1','7')
     console.log(urlCode)
 
     if (validUrl.isUri(lUrl)) {

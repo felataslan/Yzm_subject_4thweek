@@ -2,5 +2,5 @@ POST  http://localhost:5000/url/shortlink
 Content-Type: application/json
 
 {
-    "lUrl":"https://github.com/dylang/shortid#readme"
+    "lUrl":"https://www.youtube.com/watch?v=4zUR2lzGuSk&list=PL-Hkw4CrSVq9rjSeiozfv0EgLUXeeS8G9&index=18"
 }

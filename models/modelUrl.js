@@ -10,7 +10,7 @@ const urlSchema = new mongoose.Schema({
     type:String,
     } ,
     sUrl:{
-        type:String,
+    type:String,
     } 
 });
 
