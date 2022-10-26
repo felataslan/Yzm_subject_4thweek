@@ -3,11 +3,13 @@ const express = require("express");
 const router = express.Router();
 const validUrl = require("valid-url");
 const shortid = require("shortid");
-
 const Url = require("../models/modelUrl");
+const { setMaxListeners, getMaxListeners } = require("../models/modelUrl");
+
+
 port=process.env.PORT
 
-router.post("/shorten", async (req, res) => {
+router.post("/shortlink", async (req, res) => {
     const { lUrl } = req.body;
     console.log(req.body);
     const baseUrl = `http://localhost:${port}`
@@ -17,7 +19,8 @@ router.post("/shorten", async (req, res) => {
         return res.status(401).json("Invalid base url");
     }
 
-    const urlCode = shortid.generate();
+    const urlCode = shortid.generate()
+    console.log(urlCode)
 
     if (validUrl.isUri(lUrl)) {
         try {

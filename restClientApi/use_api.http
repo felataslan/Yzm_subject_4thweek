@@ -1,6 +1,6 @@
-POST  http://localhost:5000/url/shorten
+POST  http://localhost:5000/url/shortlink
 Content-Type: application/json
 
 {
-    "lUrl":"https://www.google.com.tr/?hl=tr"
+    "lUrl":"https://github.com/dylang/shortid#readme"
 }

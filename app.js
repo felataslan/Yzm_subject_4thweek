@@ -1,13 +1,13 @@
 require("dotenv/config")
 const express = require("express");
-const conn = require("./database/database")
+const connAsync = require("./database/database")
 lUrlRouter=require("./routers/lUrlRouter");
 sUrlRouter=require("./routers/sUrlRouter")
 
 const PORT = process.env.PORT||5000;
 const app = express();
 
-conn();
+connAsync();
 
 app.use(express.json());
 
